@@ -1,10 +1,13 @@
-let 次數 = 0
-let 次數100 = 0
+let B = 0
+let A = 0
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(0)
+    B = randint(10, 99)
+    basic.showNumber(A)
 })
-input.onGesture(Gesture.Shake, function () {
-    次數 = 0
-    次數100 = 0
-    basic.showNumber(次數)
+input.onButtonPressed(Button.AB, function () {
+    basic.showNumber(A + B)
+})
+input.onButtonPressed(Button.B, function () {
+    B = randint(10, 99)
+    basic.showNumber(B)
 })
